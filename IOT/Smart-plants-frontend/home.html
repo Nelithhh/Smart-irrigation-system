@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farm Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="homeheading">WELCOME, FARMER</h1>
+        <div class="content">
+            <div class="row1">
+                <div class="status">
+                    <p class="statusp"><span>Today's Status : </span><span id="todayStatus"></span></p>
+                </div>
+                <div class="sensordata" id="sensorData">
+                    <h3>Today's Data</h3>
+                    <p><span>Rain : </span><span id="rainValue"></span></p>
+                    <p><span>Soil Moisture : </span><span id="moistureValue"></span> /1024</p>
+                    <p><span>Water Flow : </span><span id="waterFlowValue"></span> mL/s</p>
+                    <p><span>Air Humidity : </span><span id="humidityValue"></span> g/kg</p>
+                    <p><span>Air Pressure : </span><span id="pressureValue"></span> mb</p>
+                    <p><span>Temperature : </span><span id="temperatureValue"></span> °C</p>
+                </div>
+            </div>
+        </div>
+        <div class="data-charts">
+            <h2>Real-time Farm Data</h2>
+            <div class="chart-row">
+                <div class="chart-container">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2453905/charts/1?bgcolor=%23ffffff&color=%230047ab&dynamic=true&results=60&title=Soil+Moisture&type=spline"></iframe>
+                </div>
+                <div class="chart-container">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2453905/charts/2?bgcolor=%23ffffff&color=%2350c878&dynamic=true&results=60&title=Air+Pressure&type=line"></iframe>
+                </div>
+            </div>
+            <div class="chart-row">
+                <div class="chart-container">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2453905/charts/3?bgcolor=%23ffffff&color=%236a0dad&dynamic=true&results=60&title=Humidity&type=line"></iframe>
+                </div>
+                <div class="chart-container">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2453905/charts/4?bgcolor=%23ffffff&color=%23008080&dynamic=true&results=60&title=Temperature&type=line"></iframe>
+                </div>
+            </div>
+            <div class="chart-single">
+                <div class="chart-container">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2453905/charts/5?bgcolor=%23ffffff&color=%23800000&dynamic=true&results=60&title=Flow+Rate&type=line"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <h2>Data Submission to NodeMCU</h2>
+            <form id="dataForm">
+                <label for="dataField">Choose Data:</label>
+                <select id="dataField" name="dataField" required>
+                    <option value="0001">1 L</option>
+                    <option value="0002">2 L</option>
+                    <option value="0003">3 L</option>
+                    <option value="0100">100 mL</option>
+                    <option value="1111">Man. ON</option>
+                    <option value="0000">Man. OFF</option>
+                </select>
+                <input type="submit" value="Send Data">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

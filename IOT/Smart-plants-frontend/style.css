@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.loginbody{
+    background-image: url(images/bg.png);
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    vertical-align: center;
+    
+}
+h1{
+    font-family: 'Luckiest Guy', cursive;
+}
+.logincontainer{
+    border-radius: 32px;
+    padding: 30px 40px;
+    padding-bottom: 50px;
+    text-align: center;
+    width:20%;
+    background-color: rgba(7, 30, 7, 0.703);
+}
+.logincontainer form{
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    color: white;
+    border-radius: 22px;
+    margin-top: 10px;
+    outline: none;
+    padding: 10px 10px;
+    border: 2px solid #ffff; 
+    background-color: transparent;
+}
+::placeholder{
+    color: white;
+}
+.btn{
+    background-color: #51733E;
+    border: none;
+    margin-top: 10px;
+}
+
+.container{
+    padding: 20px 60px;
+}
+.content{
+    display: flex;
+}
+.row1{
+    width: 50%;
+}
+.row2{
+    width: 50%;
+}
+span{
+    font-size: 18px;
+    font-weight: 800;
+}
+.sensordata{
+    width: 70%;
+    background-color: #EDF6E0;
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.water-usage{
+    width: 70%;
+    background-color: #D2E1EB;
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.predic{
+    width: 70%;
+    background-color: #E2CEC7;
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+.homeheading{
+    color: #51733E;
+}
+
+.form-container {
+    width: auto; 
+    max-width: 400px; 
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="submit"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.data-charts {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f9f9f9; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.chart-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px; 
+}
+
+.chart-container {
+    flex: 1; 
+    padding: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.chart-single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; 
+}
+
+form input[type="text"] {
+    color: black;
+    border-radius: 22px;
+    margin-top: 10px;
+    outline: none;
+    padding: 10px 10px;
+    border: 2px solid #ffff;
+    background-color: transparent;
+}
+
+.form-container select {
+    color: #333;
+    background-color: #fff; 
+    border: 2px solid #ccc;
+    border-radius: 4px; 
+    padding: 10px; 
+    margin-top: 10px; 
+    width: calc(100% - 20px);
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    cursor: pointer;
+}
+
+.form-container select {
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) center, calc(100% - 15px) center, calc(100% - 2.5em) center;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width: 768px) {
+    .chart-row {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .data-charts, .chart-container, .chart-single {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container form {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .logincontainer{
+        width:50%;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .logincontainer{
+        width:70%;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .container{
+        padding: 10px 5%;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .row1{
+        width: 100%;
+    }
+    .row2{
+        width: 100%;
+    }
+    .water-usage{
+        width: 70%;
+    }
+    .sensordata{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .form-container {
+        width: 90%; 
+        max-width: none;
+    }
+    .form-container select {
+        width: 100%; 
+    }
+}
+
+#todayStatus,
+#rainValue,
+#moistureValue,
+#waterFlowValue,
+#humidityValue,
+#pressureValue,
+#temperatureValue,
+#dailyWater,
+#tomorrowPrediction,
+#monthlyPrediction {
+    font-weight: normal;
+}
